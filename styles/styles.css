@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600&display=swap");
+body {
+  font-family: "Roboto Slab", serif !important;
+  background-color: #4682A9;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+code,
+em,
+img,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+canvas,
+embed,
+footer,
+header,
+nav,
+section,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  border-radius: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  padding: 5vh 10%;
+  justify-content: space-between;
+}
+.header__name {
+  color: #E4AD91;
+  font-size: 30px;
+  text-decoration: underline;
+}
+.header #city-search input,
+.header #city-search button {
+  border-radius: 20px;
+  border-color: transparent;
+  padding: 5px 10px;
+}
+.header #city-search button {
+  background-color: #749BC2;
+  color: #F6F4EB;
+}
+.header #city-search button:hover {
+  background-color: #91C8E4;
+  cursor: pointer;
+}
+
+#current {
+  display: flex;
+  flex-direction: row;
+  padding: 0 10%;
+}
+#current__forecast,
+#current #upcoming__forecast {
+  width: 50%;
+}
+#current__forecast {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #F6F4EB;
+}
+#current__forecast .city-name {
+  font-size: 25px;
+  font-weight: 600;
+}
+#current__forecast span {
+  background-color: #9FE491;
+  padding: 1px 10px 3px 10px;
+  border-radius: 10px;
+}
+#current__forecast span .current-description {
+  background-color: #9FE491;
+}
+#current__weather {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 30px 5%;
+  width: 100%;
+}
+#current__weather .current__temperature {
+  display: block;
+  font-size: 50px;
+  width: 100%;
+}
+#current #upcoming__forecast {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+#current #upcoming__forecast span {
+  background-color: #E4AD91;
+  color: #F6F4EB;
+  padding: 1px 10px 3px 10px;
+  border-radius: 10px;
+}
+#current #upcoming__forecast #upcoming__list {
+  float: left;
+}
+#current #upcoming__forecast #upcoming__list .upcoming__container {
+  margin: 15px;
+  color: #E4AD91;
+}
+#current #upcoming__forecast #upcoming__list .upcoming__container .upcoming__temperature {
+  color: #F6F4EB;
+  margin-top: 5px;
+}
+#current #upcoming__forecast .upcoming__description {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+#current #upcoming__forecast .upcoming__description .upcoming__paragraph {
+  color: #9FE491;
+}
+#current #upcoming__data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.next {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10vh 10%;
+  align-items: flex-start;
+}
+.next span {
+  background-color: #E4AD91;
+  color: #F6F4EB;
+  padding: 1px 10px 3px 10px;
+  border-radius: 10px;
+}
+.next__data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.next__container {
+  margin: 20px 0;
+}
+.next .date {
+  color: #E4AD91;
+}
+.next__temperature {
+  color: #F6F4EB;
+  margin: 10px 0;
+}
+.next__paragraph {
+  color: #9FE491;
+}/*# sourceMappingURL=styles.css.map */

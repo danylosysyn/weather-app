@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="header__name">
+                <p>WEATHER APP</p>
+            </div>
+            <div id="city-search">
+                <input id="city-choose" type="text" placeholder="Enter city name">
+                <button id="search" type="submit">Search</button>
+            </div>
+        </div>
+        <main>
+            <div id="current">
+                <div id="current__forecast">
+                    <p class="city-name">Lviv, Ukraine</p>
+                    <div id="current__weather">
+                        <div class="current__img_container"></div>
+                        <p class="current__temperature">10 C</p>
+                    </div>
+                    <span>
+                        <p class="current__description">Broken clouds</p>
+                    </span>
+                </div>
+                <div id="upcoming__forecast">
+                    <span>
+                        <p id="upcoming__text">Upcoming forecast</p>
+                    </span>
+                    <div id="upcoming__data">
+                        <ul id="upcoming__list">
+                            <li class="upcoming__container">
+                                <p class="upcoming__time">10:00 a.m.</p>
+                                <p class="upcoming__temperature">15 C / 10 C</p>
+                            </li>
+                            <li class="upcoming__container">
+                                <p class="upcoming__time">10:00 a.m.</p>
+                                <p class="upcoming__temperature">15 C / 10 C</p>
+                            </li>
+                            <li class="upcoming__container">
+                                <p class="upcoming__time">10:00 a.m.</p>
+                                <p class="upcoming__temperature">15 C / 10 C</p>
+                            </li>
+                            <li class="upcoming__container">
+                                <p class="upcoming__time">10:00 a.m.</p>
+                                <p class="upcoming__temperature">15 C / 10 C</p>
+                            </li>
+                            <li class="upcoming__container">
+                                <p class="upcoming__time">10:00 a.m.</p>
+                                <p class="upcoming__temperature">15 C / 10 C</p>
+                            </li>
+                        </ul>
+                        <div class="upcoming__description">
+                            <p class="upcoming__paragraph">Scattered cloudes</p>
+                            <p class="upcoming__paragraph">Scattered cloudes</p>
+                            <p class="upcoming__paragraph">Scattered cloudes</p>
+                            <p class="upcoming__paragraph">Scattered cloudes</p>
+                            <p class="upcoming__paragraph">Scattered cloudes</p>
+                        </div>
+                    </div>
+                </div>
+        </main>
+        <section>
+            <div class="next">
+                <span>
+                    <p id="upcoming__text">Next 4 Days Forecast</p>
+                </span>
+                <div class="next__data">
+                    <div class="next__container">
+                        <p class="date">Tue Jul 05 2022</p>
+                        <p class="next__temperature">33 C / 33 C</p>
+                        <p class="next__paragraph">Broken clouds</p>
+                    </div>
+                    <div class="next__container">
+                        <p class="date">Tue Jul 05 2022</p>
+                        <p class="next__temperature">33 C / 33 C</p>
+                        <p class="next__paragraph">Broken clouds</p>
+                    </div>
+                    <div class="next__container">
+                        <p class="date">Tue Jul 05 2022</p>
+                        <p class="next__temperature">33 C / 33 C</p>
+                        <p class="next__paragraph">Broken clouds</p>
+                    </div>
+                    <div class="next__container">
+                        <p class="date">Tue Jul 05 2022</p>
+                        <p class="next__temperature">33 C / 33 C</p>
+                        <p class="next__paragraph">Broken clouds</p>
+                    </div>
+                </div>
+            </div>
+
+
+            </div>
+        </section>
+    </header>
+
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>
