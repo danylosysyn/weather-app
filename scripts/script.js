@@ -121,3 +121,4 @@ function dayForecast(forecast) {
         div.appendChild(day)
     }
 }
+
