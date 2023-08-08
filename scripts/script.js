@@ -63,6 +63,7 @@ function hourForecast(forecast) {
     let div = document.getElementById("upcoming__list");
     div.innerHTML = ""
     let descDiv = document.getElementsByClassName("upcoming__description")[0];
+    descDiv.innerHTML = ""
 
     for (let i = 0; i < 5; i++) {
 
