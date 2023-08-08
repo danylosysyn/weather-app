@@ -131,7 +131,7 @@ input {
     border-radius: 0;
 }
 
-.background-vid{
+.background-vid {
     position: absolute;
     min-width: 100%;
     z-index: -5;
@@ -174,6 +174,8 @@ input {
     display: flex;
     flex-direction: row;
     padding: 0 $padding-l-r;
+    position: relative;
+    background-color: #577491a8;
 
     .current__img_container {
         width: 70px;
@@ -287,9 +289,20 @@ input {
             flex-direction: row;
             justify-content: space-between;
             width: 100%;
+            position: relative;
         }
 
     }
+}
+
+#current::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+    height: 5px;
+    background-color: $green;
 }
 
 .next {
@@ -331,4 +344,13 @@ input {
     &__paragraph {
         color: $green;
     }
+}
+
+.vl {
+    border-left: $green 5px solid;
+    top: 13%;
+    height: 200px;
+    position: absolute;
+    margin-left: -5%;
+
 }

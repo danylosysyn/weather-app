@@ -150,6 +150,8 @@ input {
   display: flex;
   flex-direction: row;
   padding: 0 10%;
+  position: relative;
+  background-color: rgba(87, 116, 145, 0.6588235294);
 }
 #current .current__img_container {
   width: 70px;
@@ -237,6 +239,17 @@ input {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  position: relative;
+}
+
+#current::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 50%;
+  height: 5px;
+  background-color: #9FE491;
 }
 
 .next {
@@ -271,4 +284,12 @@ input {
 }
 .next__paragraph {
   color: #9FE491;
+}
+
+.vl {
+  border-left: #9FE491 5px solid;
+  top: 13%;
+  height: 200px;
+  position: absolute;
+  margin-left: -5%;
 }/*# sourceMappingURL=styles.css.map */

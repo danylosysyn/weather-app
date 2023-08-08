@@ -15,11 +15,25 @@ window.addEventListener("load", () => {
                 .then((rez) =>
                     rez.json())
                 .then((data) => {
-                    console.log(data)
                     reportWeather(data)
                 })
         })
     }
+})
+
+const searcher = document.getElementById("search");
+const input = document.getElementById("city-choose");
+
+searcher.addEventListener("click", () => {
+    let place = input.value;
+    const urlsearch = `http://api.openweathermap.org/data/2.5/weather?q=${place}&appid=${apiKey}`;
+    fetch(urlsearch)
+        .then((rez) =>
+            rez.json())
+        .then((data) => {
+            data.message ? alert(data.message) : reportWeather(data);
+        })
+
 })
 
 function reportWeather(data) {
@@ -29,7 +43,6 @@ function reportWeather(data) {
         .then((res) =>
             res.json())
         .then((forecast) => {
-            console.log(forecast)
             dayForecast(forecast);
             hourForecast(forecast)
 
@@ -81,5 +94,29 @@ function hourForecast(forecast) {
 }
 
 function dayForecast(forecast) {
+    let div = document.getElementsByClassName("next__data")[0];
+    div.innerHTML = "";
 
+    for (let i = 8; i < forecast.list.length; i += 8) {
+        let day = document.createElement("div");
+        day.setAttribute("class", "next__container");
+
+        let date = document.createElement("div");
+        date.setAttribute("class", "date");
+        date.innerText = new Date(forecast.list[i].dt * 1000).toDateString(undefined, "Asia/Kolkata")
+
+        let temp = document.createElement("div");
+        temp.setAttribute("class", "next__temperature");
+        temp.innerText = Math.round(forecast.list[i].main.temp_max - 273) + "C / " + Math.round(forecast.list[i].main.temp_min - 273) + "C";
+
+        let desc = document.createElement("div");
+        desc.setAttribute("class", "next__paragraph");
+        desc.innerText = forecast.list[i].weather[0].description;
+
+
+        day.appendChild(date)
+        day.appendChild(temp)
+        day.appendChild(desc)
+        div.appendChild(day)
+    }
 }
